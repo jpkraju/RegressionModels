@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: nb_edu_regressionmodels
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_TOKEN=mytoken
